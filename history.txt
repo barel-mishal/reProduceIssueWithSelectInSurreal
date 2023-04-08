@@ -1,0 +1,2 @@
+#V2
+  CREATE user:123 CONTENT {\n    email: "b.m@mail.com",\n    name: "Bobby"\n  };\n\n  CREATE user CONTENT {\n    email: "something",\n    name: "something"\n};

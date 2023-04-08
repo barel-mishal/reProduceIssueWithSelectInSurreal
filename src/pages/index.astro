@@ -1,4 +1,21 @@
 ---
+import { useDb } from "../db/db";
+
+if (!useDb) throw new Error("db not connected");
+
+
+// Working!
+console.log('select all user (should work)', await useDb.select("user"))
+
+// NOT WORKING
+// console.log('select specific user should not work', useDb.select("user:123")); // getting RecordError: Record not found: user:123
+
+// Use query builder
+console.log('works using query', await useDb.query('SELECT * FROM user:123'))
+
+
+
+
 ---
 
 <html lang="en">
